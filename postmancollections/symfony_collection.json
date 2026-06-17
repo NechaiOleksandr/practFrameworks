@@ -1,0 +1,65 @@
+{
+	"info": {
+		"name": "Symfony Question API",
+		"description": "Чиста документація REST API сутності Question для Symfony (Пункт 8 практики).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Questions",
+			"request": {
+				"method": "GET",
+				"header": [{"key": "Accept", "value": "application/json"}],
+				"url": { "raw": "http://127.0.0.1:8080/api/questions" }
+			}
+		},
+		{
+			"name": "Create Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{"key": "Content-Type", "value": "application/json"},
+					{"key": "Accept", "value": "application/json"}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Як налаштувати маршрутизацію у Symfony за допомогою атрибутів?\",\n    \"isActive\": true\n}",
+					"options": { "raw": { "language": "json" } }
+				},
+				"url": { "raw": "http://127.0.0.1:8080/api/questions" }
+			}
+		},
+		{
+			"name": "Get Question by ID",
+			"request": {
+				"method": "GET",
+				"header": [{"key": "Accept", "value": "application/json"}],
+				"url": { "raw": "http://127.0.0.1:8080/api/questions/1" }
+			}
+		},
+		{
+			"name": "Update Question",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{"key": "Content-Type", "value": "application/json"},
+					{"key": "Accept", "value": "application/json"}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Оновлений текст запитання для Symfony проекту\",\n    \"isActive\": false\n}",
+					"options": { "raw": { "language": "json" } }
+				},
+				"url": { "raw": "http://127.0.0.1:8080/api/questions/1" }
+			}
+		},
+		{
+			"name": "Delete Question",
+			"request": {
+				"method": "DELETE",
+				"header": [{"key": "Accept", "value": "application/json"}],
+				"url": { "raw": "http://127.0.0.1:8080/api/questions/1" }
+			}
+		}
+	]
+}
