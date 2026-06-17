@@ -1,0 +1,4 @@
+/symfony/vendor/
+/symfony/.env.local
+/laravel/vendor/
+/laravel/.env
